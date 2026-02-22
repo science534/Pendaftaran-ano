@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Pendaftaran Astronomy Night Orion</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:Arial, sans-serif;
+  color:white;
+  background:
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.8)),
+    url("https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?q=80&w=1600") center/cover no-repeat;
+}
+
+.form-box{
+  background:rgba(0,0,0,.7);
+  padding:20px;
+  border-radius:12px;
+  width:90%;
+  max-width:360px;
+}
+
+h2{
+  text-align:center;
+  margin-bottom:15px;
+}
+
+input, select, textarea, button{
+  width:100%;
+  padding:10px;
+  margin-top:8px;
+  border:none;
+  border-radius:8px;
+  outline:none;
+}
+
+button{
+  margin-top:12px;
+  background:#4fc3f7;
+  font-weight:bold;
+  cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="form-box">
+  <h2>Astronomy Night Orion</h2>
+
+  <form>
+    <input type="text" placeholder="Nama" required>
+
+    <input type="text" placeholder="Akun TikTok" required>
+
+    <input type="number" placeholder="Umur" required>
+
+    <select required>
+      <option value="">Pilih status</option>
+      <option>Pelajar</option>
+      <option>Mahasiswa</option>
+      <option>Pekerja</option>
+      <option>Lainnya</option>
+    </select>
+
+    <textarea rows="3" placeholder="Alasan masuk ano" required></textarea>
+
+    <button type="submit">Daftar</button>
+  </form>
+</div>
+
+</body>
+</html>
