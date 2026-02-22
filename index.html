@@ -19,7 +19,6 @@
             position: relative;
         }
 
-        /* Animasi Background Galaxy */
         .galaxy-animation {
             position: absolute;
             top: 0;
@@ -40,7 +39,6 @@
             }
         }
 
-        /* Form Container */
         .form-container {
             background-color: rgba(0, 0, 0, 0.8);
             padding: 40px;
@@ -176,14 +174,14 @@
         const status = document.getElementById('status').value;
         const reason = document.getElementById('reason').value;
 
-        // Validasi data
-        if (name && age && tiktok && status && reason) {
-            // Tampilkan pesan sukses
-            document.getElementById('feedback').style.display = 'block';
-            document.getElementById('feedback').textContent = `Terima kasih, ${name}! Pendaftaran Anda sebagai ${status} berhasil!`;
-        } else {
-            alert('Pastikan semua form diisi dengan benar!');
-        }
+        // Membuat pesan untuk dikirim ke WhatsApp
+        const message = `*Pendaftaran Astronomy Night Orion*\n\nNama: ${name}\nUmur: ${age}\nAkun TikTok: ${tiktok}\nStatus: ${status}\nAlasan Masuk ANO: ${reason}`;
+
+        // Membuat URL WhatsApp untuk mengirim pesan
+        const whatsappUrl = `https://wa.me/082150800880?text=${encodeURIComponent(message)}`;
+
+        // Redirect pengguna ke WhatsApp untuk mengirim pesan
+        window.open(whatsappUrl, '_blank');
     });
 </script>
 
